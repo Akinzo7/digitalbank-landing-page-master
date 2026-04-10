@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-neutral-veryLightGray text-neutral-grayishBlue overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-limeGreen to-primary-brightCyan text-white rounded-full px-8 py-3 font-bold text-sm hover:opacity-70 transition-opacity duration-300 shadow-md;
+  }
+}
