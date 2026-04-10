@@ -31,9 +31,9 @@ export default function Hero() {
         >
           <motion.h1 
             variants={itemVariants}
-            className="text-4xl lg:text-5xl lg:leading-tight font-light text-primary-darkBlue mb-6"
+            className="text-4xl lg:text-5xl lg:leading-tight font-light text-primary-darkBlue mb-6 text-balance mx-auto lg:mx-0"
           >
-            Next generation <br className="hidden lg:block"/> digital banking
+            Next generation digital banking
           </motion.h1>
           <motion.p 
             variants={itemVariants}

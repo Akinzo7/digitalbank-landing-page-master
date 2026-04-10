@@ -65,29 +65,31 @@ export default function Articles() {
           viewport={{ once: true, margin: "-50px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
-          {articles.map((article, idx) => (
+          {articles.map((article) => (
             <motion.article 
-              key={idx} 
+              key={article.title} 
               variants={itemVariants} 
-              className="bg-white rounded-lg overflow-hidden shadow-sm group cursor-pointer"
+              className="bg-white rounded-lg overflow-hidden shadow-sm group relative transition-shadow hover:shadow-md"
             >
-              <div className="relative h-48 w-full overflow-hidden">
-                <Image 
-                  src={article.image} 
-                  alt={article.title} 
-                  fill 
-                  className="object-cover group-hover:scale-105 transition-transform duration-500" 
-                />
-              </div>
-              <div className="p-6 lg:p-8">
-                <p className="text-xs text-neutral-grayishBlue mb-3">{article.author}</p>
-                <h3 className="text-lg text-primary-darkBlue mb-3 font-medium group-hover:text-primary-limeGreen transition-colors line-clamp-2">
-                  <a href="#">{article.title}</a>
-                </h3>
-                <p className="text-neutral-grayishBlue text-sm leading-relaxed line-clamp-3">
-                  {article.description}
-                </p>
-              </div>
+              <a href="#" className="block h-full cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-limeGreen">
+                <div className="relative h-48 w-full overflow-hidden">
+                  <Image 
+                    src={article.image} 
+                    alt={article.title} 
+                    fill 
+                    className="object-cover group-hover:scale-105 transition-transform duration-500" 
+                  />
+                </div>
+                <div className="p-6 lg:p-8">
+                  <p className="text-xs text-neutral-grayishBlue mb-3">{article.author}</p>
+                  <h3 className="text-lg text-primary-darkBlue mb-3 font-medium group-hover:text-primary-limeGreen transition-colors line-clamp-2">
+                    {article.title}
+                  </h3>
+                  <p className="text-neutral-grayishBlue text-sm leading-relaxed line-clamp-3">
+                    {article.description}
+                  </p>
+                </div>
+              </a>
             </motion.article>
           ))}
         </motion.div>

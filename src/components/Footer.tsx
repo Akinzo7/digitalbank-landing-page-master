@@ -54,7 +54,7 @@ export default function Footer() {
       </div>
       
       {/* Mentor attribution */}
-      <div className="text-center text-xs text-neutral-grayishBlue mt-8">
+      <div className="attribution text-center text-[clamp(0.875rem,1.6vw,1rem)] text-neutral-grayishBlue mt-8">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" className="text-white hover:text-primary-limeGreen" target="_blank" rel="noreferrer">Frontend Mentor</a>. 
         Coded by <a href="#" className="text-white hover:text-primary-limeGreen">Akinwumi Akinfemi</a>.
       </div>

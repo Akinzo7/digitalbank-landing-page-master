@@ -64,8 +64,8 @@ export default function Features() {
           viewport={{ once: true, margin: "-50px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center lg:text-left"
         >
-          {features.map((feature, idx) => (
-            <motion.div key={idx} variants={itemVariants} className="flex flex-col items-center lg:items-start">
+          {features.map((feature) => (
+            <motion.div key={feature.title} variants={itemVariants} className="flex flex-col items-center lg:items-start">
               <div className="mb-6">
                 <Image src={feature.icon} alt={feature.title} width={72} height={72} />
               </div>
