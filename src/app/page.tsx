@@ -6,12 +6,14 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <>
       <Navbar />
-      <Hero />
-      <Features />
-      <Articles />
+      <main className="min-h-screen">
+        <Hero />
+        <Features />
+        <Articles />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }

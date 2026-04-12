@@ -27,19 +27,22 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Nav Links Column 1 */}
-          <div className="flex flex-col space-y-4">
-            <a href="#" className="text-neutral-lightGrayishBlue hover:text-primary-limeGreen transition-colors text-sm">About Us</a>
-            <a href="#" className="text-neutral-lightGrayishBlue hover:text-primary-limeGreen transition-colors text-sm">Contact</a>
-            <a href="#" className="text-neutral-lightGrayishBlue hover:text-primary-limeGreen transition-colors text-sm">Blog</a>
-          </div>
+          {/* Nav Links */}
+          <nav aria-label="Footer" className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-24">
+            {/* Column 1 */}
+            <ul className="flex flex-col space-y-4">
+              <li><a href="#" className="text-neutral-lightGrayishBlue hover:text-primary-limeGreen transition-colors text-sm">About Us</a></li>
+              <li><a href="#" className="text-neutral-lightGrayishBlue hover:text-primary-limeGreen transition-colors text-sm">Contact</a></li>
+              <li><a href="#" className="text-neutral-lightGrayishBlue hover:text-primary-limeGreen transition-colors text-sm">Blog</a></li>
+            </ul>
 
-          {/* Nav Links Column 2 */}
-          <div className="flex flex-col space-y-4">
-            <a href="#" className="text-neutral-lightGrayishBlue hover:text-primary-limeGreen transition-colors text-sm">Careers</a>
-            <a href="#" className="text-neutral-lightGrayishBlue hover:text-primary-limeGreen transition-colors text-sm">Support</a>
-            <a href="#" className="text-neutral-lightGrayishBlue hover:text-primary-limeGreen transition-colors text-sm">Privacy Policy</a>
-          </div>
+            {/* Column 2 */}
+            <ul className="flex flex-col space-y-4">
+              <li><a href="#" className="text-neutral-lightGrayishBlue hover:text-primary-limeGreen transition-colors text-sm">Careers</a></li>
+              <li><a href="#" className="text-neutral-lightGrayishBlue hover:text-primary-limeGreen transition-colors text-sm">Support</a></li>
+              <li><a href="#" className="text-neutral-lightGrayishBlue hover:text-primary-limeGreen transition-colors text-sm">Privacy Policy</a></li>
+            </ul>
+          </nav>
 
         </div>
 
