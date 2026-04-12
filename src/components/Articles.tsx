@@ -66,16 +66,18 @@ export default function Articles() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {articles.map((article) => (
-            <motion.article 
+            <motion.a 
               key={article.title} 
               variants={itemVariants} 
-              className="bg-white rounded-lg overflow-hidden shadow-sm group relative transition-shadow hover:shadow-md"
+              href="#"
+              aria-label={`Read article: ${article.title}`}
+              className="block cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-limeGreen rounded-lg"
             >
-              <a href="#" className="block h-full cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-limeGreen">
+              <article className="bg-white h-full rounded-lg overflow-hidden shadow-sm group relative transition-shadow hover:shadow-md">
                 <div className="relative h-48 w-full overflow-hidden">
                   <Image 
                     src={article.image} 
-                    alt={article.title} 
+                    alt="" 
                     fill 
                     className="object-cover group-hover:scale-105 transition-transform duration-500" 
                   />
@@ -89,8 +91,8 @@ export default function Articles() {
                     {article.description}
                   </p>
                 </div>
-              </a>
-            </motion.article>
+              </article>
+            </motion.a>
           ))}
         </motion.div>
       </div>

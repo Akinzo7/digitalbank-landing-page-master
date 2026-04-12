@@ -32,8 +32,9 @@ export default function Navbar() {
         <button
           className="lg:hidden z-50"
           onClick={() => setIsOpen(!isOpen)}
+          aria-controls="mobile-menu"
           aria-label="Toggle Menu"
-          aria-expanded={isOpen}
+          aria-expanded={isOpen ? "true" : "false"}
         >
           <Image
             src={isOpen ? "/images/icon-close.svg" : "/images/icon-hamburger.svg"}
